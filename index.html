@@ -8,15 +8,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="p-5">
-    <div id="parameter" class="form max-w-xs border p-5 rounded-xl border-secondary">
+<body class="p-5 sm:flex-col">
+    <div class="mt-4 right-5 top-5 absolute">
+        <button onclick="toggleTheme()" class="btn btn-secondary">
+            <i id="themeIcon" class="ri-moon-fill"></i>
+        </button>
+    </div>
+    <div id="parameter" class="form border p-5 rounded-xl border-secondary w-1/5">
         <div>
             <label for="site" class="label">Entrez le nom du site:</label>
-            <input type="text" id="site" placeholder="Entrez le nom du site" class="input border-secondary input-bordered w-full max-w-xs" />
+            <input type="text" id="site" placeholder="Entrez le nom du site"
+                class="input border-secondary input-bordered w-full max-w-xs" />
         </div>
         <div>
             <label for="length" class="label">Longueur du mot de passe:</label>
-            <input type="number" id="length" value="12" placeholder="Longueur du mot de passe" class="input input-bordered border-secondary w-full max-w-xs" />
+            <input type="number" id="length" value="12" placeholder="Longueur du mot de passe"
+                class="input input-bordered border-secondary w-full max-w-xs" />
         </div>
         <div class="form-control">
             <label class="label cursor-pointer">
@@ -40,9 +47,23 @@
             <button onclick="generateStrongPassword()" class="btn btn-secondary">Générer le mot de passe</button>
         </div>
     </div>
-    <div id="passwordsContainer" class="max-w-screen-xl mx-auto p-4"></div>
+    <div id="passwordsContainer" class="w-4/5 mx-auto p-4 grid-cols-4 gap-4 md:grid-cols-3 sm:grid-cols-4"></div>
 
     <script>
+
+        function toggleTheme() {
+            var htmlElement = document.getElementsByTagName("html")[0];
+            var currentTheme = htmlElement.getAttribute("data-theme");
+            var themeIcon = document.getElementById("themeIcon");
+            if (currentTheme === "cupcake") {
+                htmlElement.setAttribute("data-theme", "dark");
+                themeIcon.className = "ri-moon-fill";
+            } else {
+                htmlElement.setAttribute("data-theme", "cupcake");
+                themeIcon.className = "ri-sun-fill";
+            }
+        }
+
         function generateStrongPassword() {
             var site = document.getElementById("site").value;
             var length = document.getElementById("length").value;
@@ -85,24 +106,24 @@
             return result;
         }
 
-    function addPasswordToContainer(site, password) {
-        var container = document.getElementById("passwordsContainer");
-        var card = document.createElement("div");
-        card.className = "card my-5 mx-4 w-96 bg-base-300 shadow-xl";
-        card.innerHTML = "<div class='card-body'><h2 class='card-title pb-5'><i class='ri-" + getIconName(site) + "-fill'></i> " + site + " <div class='badge badge-secondary'>Social Network</div></h2><div class='flex items-center'><input type='text' value='" + password + "' class='input input-bordered mr-2' readonly /><button onclick='togglePasswordVisibility(this)' class='btn btn-secondary'><i class='ri-eye-line'></i></button></div></div>";
-        container.appendChild(card);
-    }
-
-    function togglePasswordVisibility(button) {
-        var passwordInput = button.previousElementSibling;
-        if (passwordInput.getAttribute('type') === 'password') {
-            passwordInput.setAttribute('type', 'text');
-            button.innerHTML = "<i class='ri-eye-off-line'></i>";
-        } else {
-            passwordInput.setAttribute('type', 'password');
-            button.innerHTML = "<i class='ri-eye-line'></i>";
+        function addPasswordToContainer(site, password) {
+            var container = document.getElementById("passwordsContainer");
+            var card = document.createElement("div");
+            card.className = "card my-5 mx-4 w-96 bg-base-300 shadow-xl";
+            card.innerHTML = "<div class='card-body'><h2 class='card-title pb-5'><i class='ri-" + getIconName(site) + "-fill'></i> " + site + " <div class='badge badge-secondary'>Social Network</div></h2><div class='flex items-center'><input type='text' value='" + password + "' class='input input-bordered mr-2' readonly /><button onclick='togglePasswordVisibility(this)' class='btn btn-secondary'><i class='ri-eye-line'></i></button></div></div>";
+            container.appendChild(card);
         }
-    }
+
+        function togglePasswordVisibility(button) {
+            var passwordInput = button.previousElementSibling;
+            if (passwordInput.getAttribute('type') === 'password') {
+                passwordInput.setAttribute('type', 'text');
+                button.innerHTML = "<i class='ri-eye-off-line'></i>";
+            } else {
+                passwordInput.setAttribute('type', 'password');
+                button.innerHTML = "<i class='ri-eye-line'></i>";
+            }
+        }
 
         function getIconName(site) {
             var icons = {
