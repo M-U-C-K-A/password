@@ -10,7 +10,6 @@ Un simple générateur de mot de passe avec des icônes de site correspondantes.
 ## Aperçu
 
 img
-
 ## Fonctionnalités
 
 - Générez des mots de passe forts pour différents sites.
