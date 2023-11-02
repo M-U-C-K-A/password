@@ -1,21 +1,22 @@
-# Convertisseur de Mesures
+# password generator
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/votre_nom/votre_projet/blob/main/LICENSE)
 [![GitHub release](https://img.shields.io/github/release/votre_nom/votre_projet.svg)](https://GitHub.com/votre_nom/votre_projet/releases/)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/votre_nom/votre_projet/graphs/commit-activity)
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://shields.io/)
 
-Un simple site web pour convertir des mesures de base : kilo en pound, metre en yard, kelvin en celsius.
+Un simple générateur de mot de passe avec des icônes de site correspondantes.
 
 ## Aperçu
 
-Insérez une capture d'écran ou un GIF montrant l'interface utilisateur de votre site.
+img
 
 ## Fonctionnalités
 
-- Conversion facile de différentes unités de mesure.
-- Interface utilisateur conviviale et intuitive.
-- Conversion rapide et précise.
+- Générez des mots de passe forts pour différents sites.
+- Personnalisez la longueur du mot de passe et les critères de génération.
+- Affichez des icônes de site correspondant au nom du site.
+- Interface utilisateur conviviale.
 
 ## Installation
 
@@ -25,11 +26,15 @@ Insérez une capture d'écran ou un GIF montrant l'interface utilisateur de votr
 
 ## Utilisation
 
-- Sélectionnez l'unité de mesure de départ.
-- Entrez la valeur que vous souhaitez convertir.
-- Sélectionnez l'unité de mesure de conversion.
-- Cliquez sur le bouton "Convertir".
-- Obtenez le résultat de la conversion.
+
+1. Saisissez le nom du site pour lequel vous souhaitez générer un mot de passe.
+2. Choisissez la longueur du mot de passe et les critères (majuscules, chiffres, caractères spéciaux).
+3. Cliquez sur le bouton "Générer le mot de passe".
+4. Obtenez un mot de passe fort avec une icône de site correspondante.
+
+## Personnalisation
+
+Ajoutez des sites supplémentaires et leurs icônes correspondantes en modifiant la liste dans le fichier `index.html`.
 
 ## Contribuer
 Les contributions sont les bienvenues ! Pour les changements majeurs, veuillez d'abord ouvrir une discussion pour discuter de ce que vous aimeriez changer.
