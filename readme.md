@@ -9,8 +9,7 @@ Un simple site web pour convertir des mesures de base : kilo en pound, metre en 
 
 ## Aperçu
 
-Insérez une capture d'écran ou un GIF montrant l'interface utilisateur de votre site.
-
+img
 ## Fonctionnalités
 
 - Conversion facile de différentes unités de mesure.
