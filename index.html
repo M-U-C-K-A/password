@@ -4,31 +4,37 @@
 <head>
     <title>Générateur de mot de passe</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <div id="parameter">
-
+<body class="max-w-screen-xl mx-auto p-4">
+    <div id="parameter" class="form max-w-xs">
         <div>
-            <label for="site">Entrez le nom du site:</label>
-            <input type="text" id="site" />
+            <label for="site" class="label">Entrez le nom du site:</label>
+            <input type="text" id="site" placeholder="Entrez le nom du site" class="input input-bordered w-full max-w-xs" />
         </div>
         <div>
-            <label for="length">Longueur du mot de passe:</label>
-            <input type="number" id="length" value="12" />
+            <label for="length" class="label">Longueur du mot de passe:</label>
+            <input type="number" id="length" value="12" placeholder="Longueur du mot de passe" class="input input-bordered w-full max-w-xs" />
         </div>
-        <div>
-            <input type="checkbox" id="uppercase" />
-            <label for="uppercase">Inclure des lettres majuscules</label>
+        <div class="form-control">
+            <label class="label cursor-pointer">
+                <span class="label-text">Inclure des lettres majuscules</span>
+                <input type="checkbox" id="uppercase" class="checkbox" />
+            </label>
         </div>
-        <div>
-            <input type="checkbox" id="numbers" />
-            <label for="numbers">Inclure des chiffres</label>
+        <div class="form-control">
+            <label class="label cursor-pointer">
+                <span class="label-text">Inclure des chiffres</span>
+                <input type="checkbox" id="numbers" class="checkbox" />
+            </label>
         </div>
-        <div>
-            <input type="checkbox" id="specialChars" />
-            <label for="specialChars">Inclure des caractères spéciaux</label>
+        <div class="form-control">
+            <label class="label cursor-pointer">
+                <span class="label-text">Inclure des caractères spéciaux</span>
+                <input type="checkbox" id="specialChars" class="checkbox" />
+            </label>
         </div>
         <div>
             <button onclick="generateStrongPassword()">Générer le mot de passe</button>
