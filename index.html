@@ -85,13 +85,24 @@
             return result;
         }
 
-        function addPasswordToContainer(site, password) {
-            var container = document.getElementById("passwordsContainer");
-            var card = document.createElement("div");
-            card.className = "card w-96 bg-base-100 shadow-xl";
-            card.innerHTML = "<div class='card-body'><h2 class='card-title'><i class='ri-" + getIconName(site) + "-fill'></i> " + site + " <div class='badge badge-secondary'>Social Network</div></h2><p>" + password + "</p></div";
-            container.appendChild(card);
+    function addPasswordToContainer(site, password) {
+        var container = document.getElementById("passwordsContainer");
+        var card = document.createElement("div");
+        card.className = "card my-5 mx-4 w-96 bg-base-300 shadow-xl";
+        card.innerHTML = "<div class='card-body'><h2 class='card-title pb-5'><i class='ri-" + getIconName(site) + "-fill'></i> " + site + " <div class='badge badge-secondary'>Social Network</div></h2><div class='flex items-center'><input type='text' value='" + password + "' class='input input-bordered mr-2' readonly /><button onclick='togglePasswordVisibility(this)' class='btn btn-secondary'><i class='ri-eye-line'></i></button></div></div>";
+        container.appendChild(card);
+    }
+
+    function togglePasswordVisibility(button) {
+        var passwordInput = button.previousElementSibling;
+        if (passwordInput.getAttribute('type') === 'password') {
+            passwordInput.setAttribute('type', 'text');
+            button.innerHTML = "<i class='ri-eye-off-line'></i>";
+        } else {
+            passwordInput.setAttribute('type', 'password');
+            button.innerHTML = "<i class='ri-eye-line'></i>";
         }
+    }
 
         function getIconName(site) {
             var icons = {
