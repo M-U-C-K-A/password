@@ -1,4 +1,5 @@
 <img alt='illustration' src='src/illustration.png'>
+
 # password generator
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/votre_nom/votre_projet/blob/main/LICENSE)
