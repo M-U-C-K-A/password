@@ -8,39 +8,39 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="max-w-screen-xl mx-auto p-4">
-    <div id="parameter" class="form max-w-xs">
+<body class="p-5">
+    <div id="parameter" class="form max-w-xs border p-5 rounded-xl border-secondary">
         <div>
             <label for="site" class="label">Entrez le nom du site:</label>
-            <input type="text" id="site" placeholder="Entrez le nom du site" class="input input-bordered w-full max-w-xs" />
+            <input type="text" id="site" placeholder="Entrez le nom du site" class="input border-secondary input-bordered w-full max-w-xs" />
         </div>
         <div>
             <label for="length" class="label">Longueur du mot de passe:</label>
-            <input type="number" id="length" value="12" placeholder="Longueur du mot de passe" class="input input-bordered w-full max-w-xs" />
+            <input type="number" id="length" value="12" placeholder="Longueur du mot de passe" class="input input-bordered border-secondary w-full max-w-xs" />
         </div>
         <div class="form-control">
             <label class="label cursor-pointer">
                 <span class="label-text">Inclure des lettres majuscules</span>
-                <input type="checkbox" id="uppercase" class="checkbox" />
+                <input type="checkbox" id="uppercase" class="checkbox checkbox-secondary" />
             </label>
         </div>
         <div class="form-control">
             <label class="label cursor-pointer">
                 <span class="label-text">Inclure des chiffres</span>
-                <input type="checkbox" id="numbers" class="checkbox" />
+                <input type="checkbox" id="numbers" class="checkbox checkbox-secondary" />
             </label>
         </div>
         <div class="form-control">
             <label class="label cursor-pointer">
                 <span class="label-text">Inclure des caractères spéciaux</span>
-                <input type="checkbox" id="specialChars" class="checkbox" />
+                <input type="checkbox" id="specialChars" class="checkbox checkbox-secondary" />
             </label>
         </div>
         <div>
-            <button onclick="generateStrongPassword()">Générer le mot de passe</button>
+            <button onclick="generateStrongPassword()" class="btn btn-secondary">Générer le mot de passe</button>
         </div>
     </div>
-    <div id="passwordsContainer"></div>
+    <div id="passwordsContainer" class="max-w-screen-xl mx-auto p-4"></div>
 
     <script>
         function generateStrongPassword() {
@@ -88,8 +88,8 @@
         function addPasswordToContainer(site, password) {
             var container = document.getElementById("passwordsContainer");
             var card = document.createElement("div");
-            card.className = "card";
-            card.innerHTML = "<h2><i class='ri-" + getIconName(site) + "-fill'></i> " + site + "</h2><p>" + password + "</p>";
+            card.className = "card w-96 bg-base-100 shadow-xl";
+            card.innerHTML = "<div class='card-body'><h2 class='card-title'><i class='ri-" + getIconName(site) + "-fill'></i> " + site + " <div class='badge badge-secondary'>Social Network</div></h2><p>" + password + "</p></div";
             container.appendChild(card);
         }
 
