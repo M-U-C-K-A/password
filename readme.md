@@ -1,3 +1,4 @@
+<img alt='illustration' src='src/illustration.png'>
 # password generator
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/votre_nom/votre_projet/blob/main/LICENSE)
@@ -9,13 +10,14 @@ Un simple générateur de mot de passe avec des icônes de site correspondantes.
 
 ## Aperçu
 
-img
+<img alt='illustration' src='src/hash password.png'>
 ## Fonctionnalités
 
 - Générez des mots de passe forts pour différents sites.
 - Personnalisez la longueur du mot de passe et les critères de génération.
 - Affichez des icônes de site correspondant au nom du site.
 - Interface utilisateur conviviale.
+<img alt='illustration' src='src/website-schema.png'>
 
 ## Installation
 
@@ -24,7 +26,6 @@ img
 3. Ouvrez `index.html` dans votre navigateur préféré.
 
 ## Utilisation
-
 
 1. Saisissez le nom du site pour lequel vous souhaitez générer un mot de passe.
 2. Choisissez la longueur du mot de passe et les critères (majuscules, chiffres, caractères spéciaux).
@@ -44,7 +45,7 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 
 
 ## Auteur
-Créé par Votre Nom.
+Créé par Hugo Delacour.
 
 ## Contact
 Pour toute question ou suggestion, n'hésitez pas à me contacter [par mail](mailto:hugodelacour.pro@gmail.com).
