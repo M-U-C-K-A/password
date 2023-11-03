@@ -2,9 +2,9 @@
 
 # password generator
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/votre_nom/votre_projet/blob/main/LICENSE)
-[![GitHub release](https://img.shields.io/github/release/votre_nom/votre_projet.svg)](https://GitHub.com/votre_nom/votre_projet/releases/)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/votre_nom/votre_projet/graphs/commit-activity)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/M-U-C-K-A/password/blob/main/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/M-U-C-K-A/password.svg)](https://GitHub.com/M-U-C-K-A/password/releases/)
+[![Maintenance](https://img.shields.io/badge/Maintained-yes-green.svg)](https://GitHub.com/M-U-C-K-A/password/graphs/commit-activity)
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://shields.io/)
 
 Un simple générateur de mot de passe avec des icônes de site correspondantes.
